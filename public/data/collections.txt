@@ -1,0 +1,21 @@
+Test
+    test\the_three_musketeers.log
+    test\around_the_world_in_eighty_days.log
+    test\robin_hood.log
+    test\tarzan.log
+    192.168.100.104:/home/glauco/logs/test1.log
+    192.168.100.104:/home/glauco/logs/test2.log
+
+Test 2
+	level 2a
+        test\wizard_of_oz.log
+	level 2b
+        test\tarzan.log
+
+Test 3
+	Level 2
+	    Level 3
+	        Level 4
+                test\test-{date:YYYY-MM-DD}.log
+
+

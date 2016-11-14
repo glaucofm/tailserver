@@ -1,0 +1,24 @@
+{
+  "name": "tailserver",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "body-parser": "~1.15.1",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.2.0",
+    "express": "~4.13.4",
+    "jade": "~1.11.0",
+    "morgan": "~1.7.0",
+    "serve-favicon": "~2.3.0",
+    "compression": "~1.6.2",
+    "ssh2": "~0.5.2",
+    "moment": "~2.15.1",
+    "graceful-fs": "~4.1.10"
+  },
+  "compilerOptions": {
+    "target": "ES6"
+  }
+}

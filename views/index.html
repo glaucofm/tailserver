@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TailClient</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen" />
+	<link href="css/bootstrap-theme.css" rel="stylesheet" media="screen" />
+	<link href="css/bootstrap.icon-large.css" rel="stylesheet" media="screen" />
+	<link href="css/tailclient.css" rel="stylesheet" media="screen" />
+  </head>
+  <body>
+  
+	<div class="container">
+		
+		<div>
+
+			<div id="div-collections" style="float: left; margin-right: 20px">
+				<div class="btn-group">
+					<div class="btn-group">
+						<button id="btn-collections" type="button" class="btn btn-primary btn-xs" style="min-width: 125px">
+							Select Files <span class="caret"></span>
+						</button>
+						<ul id="dd-collections" class="dropdown-menu">
+						</ul>
+					</div>
+					<div class="btn-group" style="margin-left: 5px">
+						<button id="btn-tail" type="button" class="btn btn-success btn-xs" onclick="createNewTail();" style="min-width: 80px">
+							<span class="glyphicon glyphicon-play glyphicon-white" style="margin-left: 0px;"></span>
+							Tail 
+						</button>
+                        <ul id="dd-tail-options" class="dropdown-menu">
+							<li style="margin-left: 5px; margin-right: 5px">
+								Other actions:
+							</li>
+                            <li style="margin-left: 5px; margin-right: 5px">
+                                <button id="btn-tail-joined" type="button" class="btn btn-success btn-xs btn-on-dd" onclick="createNewTail(true);" style="margin-top: 2px;">
+                                    Tail on single tab
+                                </button>
+                            </li>
+                            <li style="margin-left: 5px; margin-right: 5px; margin-bottom: 2px">
+                                <button id="btn-list-files" type="button" class="btn btn-success btn-xs btn-on-dd" onclick="listFiles();">
+                                    List files
+                                </button>
+                            </li>
+                        </ul>
+					</div>
+				</div>
+			</div>
+
+			<div id="div-search" style="float: left; width: 250px; margin-right: 20px">
+				<div class="input-group" style="max-width: 1600px;">
+					<span class="input-group-addon glyphicon glyphicon-search glyphicon-white" style="background-color: #ddd; z-index: 10;"></span>
+					<input id="input-search" type="text" class="form-control">
+				</div>
+			</div>
+			
+			<div id="div-highlight" style="float: left; width: 250px; margin-right: 20px">
+				<div class="input-group">
+					<span id="span-highlight-styles" class="input-group-addon input-label" style="color: #bbb">Highlight</span>
+					<ul id="dd-highlight-styles" class="dropdown-menu"></ul>
+					<input id="input-highlight" type="text" class="form-control" >
+					<ul id="dd-highlight" class="dropdown-menu dropdown-menu-right"></ul>
+				</div>
+			</div>
+
+			<div id="div-filter" style="float: left; width: 250px">
+				<div class="input-group">
+					<span class="input-group-addon input-label">Filter</span>
+					<input id="input-filter" type="text" class="form-control" >
+					<ul id="dd-filter" class="dropdown-menu dropdown-menu-right"></ul>
+				</div>
+			</div>
+
+		</div>
+
+		<div id="div-file-content-area" style="display: block">
+			<div style="min-height: 10px; display: inline-block; position: relative; ">&nbsp;</div>
+
+			<div id="div-close-buttons"></div>
+			<ul id="ul-tabs" class="nav nav-tabs">
+			</ul>
+			
+			<div id="div-tabs-content" class="tab-content">
+			</div>
+		</div>
+
+	</div>
+	
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="js/jquery/jquery-1.11.0.js"></script>
+	
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="js/bootstrap/bootstrap.min.js"></script>
+	<script src="js/bootstrap/tab.js"></script>
+	<script src="js/bootstrap/popover.js"></script>
+	<script src="js/bootstrap/dateformat.js"></script>
+	<script src="js/bootstrap/moment.min.js"></script>
+
+	<script src="js/tailserver/menu.js"></script>
+	<script src="js/tailserver/tab.js"></script>
+	<script src="js/tailserver/tail.js"></script>
+	<script src="js/tailserver/grep.js"></script>
+	<script src="js/tailserver/filter.js"></script>
+	<script src="js/tailserver/highlight.js"></script>
+    <script src="js/tailserver/browse.js"></script>
+	<script src="js/tailserver/app.js"></script>
+
+  </body>
+</html>
