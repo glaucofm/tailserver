@@ -2,10 +2,11 @@
 /// <reference path="../typings/ssh2.d.ts" />
 /// <reference path="../typings/es6-shim.d.ts" />
 "use strict";
-var fs = require('fs');
+exports.__esModule = true;
+var fs = require("fs");
 var gracefulFs = require('graceful-fs');
 gracefulFs.gracefulify(fs);
-var ssh = require('./ssh');
+var ssh = require("./ssh");
 exports.tailFile = function (filename, position, maxLoad, callback) {
     var m = new RegExp("^(.*?):(/.*)").exec(filename);
     if (m)

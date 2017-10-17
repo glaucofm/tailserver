@@ -2,12 +2,13 @@
 /// <reference path="../typings/async.d.ts" />
 /// <reference path="../typings/es6-shim.d.ts" />
 "use strict";
+exports.__esModule = true;
 var async = require("async");
-var fs = require('fs');
-var zlib = require('zlib');
-var moment = require('moment');
-var Stream = require('stream');
-var ssh = require('./ssh');
+var fs = require("fs");
+var zlib = require("zlib");
+var moment = require("moment");
+var Stream = require("stream");
+var ssh = require("./ssh");
 var FileStat = (function () {
     function FileStat(filename, host, mtime, size) {
         var _this = this;
@@ -22,11 +23,11 @@ var FileStat = (function () {
     return FileStat;
 }());
 exports.FileStat = FileStat;
+var GrepEventType;
 (function (GrepEventType) {
     GrepEventType[GrepEventType["FILE"] = 0] = "FILE";
     GrepEventType[GrepEventType["MATCH"] = 1] = "MATCH";
-})(exports.GrepEventType || (exports.GrepEventType = {}));
-var GrepEventType = exports.GrepEventType;
+})(GrepEventType = exports.GrepEventType || (exports.GrepEventType = {}));
 var listAndFilterFiles = function (path, expression, callback) {
     var m = new RegExp("^(..+):(.*)$").exec(path);
     if (m) {

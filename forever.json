@@ -1,0 +1,10 @@
+{
+  "uid": "tailserver",
+  "append": true,
+  "watch": true,
+  "script": "tailserver.js",
+  "sourceDir": "./",
+  "logFile": "./logs/forever.log",
+  "outFile": "./logs/stdout.log",
+  "errFile": "./logs/stderr.log"
+}

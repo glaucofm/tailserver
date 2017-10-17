@@ -2,8 +2,9 @@
 /// <reference path="../typings/ssh2.d.ts" />
 /// <reference path="../typings/es6-shim.d.ts" />
 "use strict";
+exports.__esModule = true;
 var ssh2_1 = require("ssh2");
-var fs = require('fs');
+var fs = require("fs");
 var gracefulFs = require('graceful-fs');
 gracefulFs.gracefulify(fs);
 var Client = require('ssh2').Client;
@@ -70,7 +71,7 @@ var getConnection = function (host, callback) {
         connections.get(host).status = "READY";
         callback(null, connections.get(host).connection, connections.get(host));
     }).on('error', function (error) {
-        connections.delete(host);
+        connections["delete"](host);
         callback(error.toString());
     });
     connections.get(host).connection.connect({

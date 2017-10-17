@@ -1,12 +1,13 @@
 /// <reference path="../typings/node.d.ts" />
 /// <reference path="../typings/express.d.ts" />
 "use strict";
+exports.__esModule = true;
 var express = require("express");
 var router = express.Router();
-var fs = require('fs');
-var tail = require('../features/tail');
-var grep = require('../features/grep');
-var files = require('../features/files');
+var fs = require("fs");
+var tail = require("../features/tail");
+var grep = require("../features/grep");
+var files = require("../features/files");
 router.get('/', function (req, res, next) {
     fs.readFile('views/index.html', function (error, data) {
         if (error) {

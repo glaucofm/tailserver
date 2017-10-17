@@ -2,19 +2,20 @@
 /// <reference path="../typings/async.d.ts" />
 /// <reference path="../typings/es6-shim.d.ts" />
 "use strict";
+exports.__esModule = true;
 var async = require("async");
-var fs = require('fs');
-var readline = require('readline');
-var zlib = require('zlib');
-var Stream = require('stream');
-var ssh = require('./ssh');
-var files = require('./files');
+var fs = require("fs");
+var readline = require("readline");
+var zlib = require("zlib");
+var Stream = require("stream");
+var ssh = require("./ssh");
+var files = require("./files");
 var stopIds = new Set();
+var GrepEventType;
 (function (GrepEventType) {
     GrepEventType[GrepEventType["FILE"] = 0] = "FILE";
     GrepEventType[GrepEventType["MATCH"] = 1] = "MATCH";
-})(exports.GrepEventType || (exports.GrepEventType = {}));
-var GrepEventType = exports.GrepEventType;
+})(GrepEventType = exports.GrepEventType || (exports.GrepEventType = {}));
 var GrepEvent = (function () {
     function GrepEvent(fileStat, lineIndex, line) {
         var _this = this;
